@@ -1,10 +1,19 @@
 import React from "react";
 import "./NavBar.css";
-
+import { useState } from "react";
+import MobileNav from "./MobileNav/MobileNav";
 
 function NavBar() {
+  const [openMenu, setOpenMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setOpenMenu(!openMenu);
+  };
+
   return (
     <>
+      <MobileNav isOpen={openMenu} toggleMenu={toggleMenu} />
+
       <nav className="navWrapper">
         <div className="nav-content">
           <img className="logo" src="../public/vite.svg" alt="" />
@@ -22,11 +31,15 @@ function NavBar() {
               <a className="menu-item">Contact Me</a>
             </li>
 
-            <button className="contact-btn" onClick={()=>{}}>Contactame</button>
+            <button className="contact-btn" onClick={() => {}}>
+              Contactame
+            </button>
           </ul>
 
-          <button class="menu-btn" onClick={()=>{}}>
-          <span className="material-icons">menu</span>
+          <button class="menu-btn" onClick={toggleMenu}>
+            <span className="material-icons">
+              {openMenu ? "close" : "menu"}
+              </span>
           </button>
         </div>
       </nav>
