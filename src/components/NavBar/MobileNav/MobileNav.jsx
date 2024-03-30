@@ -6,8 +6,32 @@ const MobileNav = ({isOpen, toggleMenu}) => {
     <>
      <div 
      
-     className='{mo}'
+     className={`mobile-nav ${isOpen ? "active" : ""}`}
+     onClick={toggleMenu}
      >
+      <div className='mobile-menu-container'>
+      <img className="logo" src="../public/vite.svg" alt="" />
+          <ul className="">
+            <li>
+              <a className="menu-item">Home</a>
+            </li>
+            <li>
+              <a className="menu-item">Skills</a>
+            </li>
+            <li>
+              <a className="menu-item">Work Expirience</a>
+            </li>
+            <li>
+              <a className="menu-item">Contact Me</a>
+            </li>
+
+            <button className="contact-btn" onClick={()=>{}}>
+              Contactame
+              </button>
+              
+          </ul>
+
+      </div>
 
      </div>
     </>
