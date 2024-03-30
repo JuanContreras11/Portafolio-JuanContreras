@@ -16,7 +16,8 @@ function NavBar() {
 
       <nav className="navWrapper">
         <div className="nav-content">
-          <img className="logo" src="../public/vite.svg" alt="" />
+          {/* <img className="logo" src="../public/vite.svg" alt="" /> */}
+          <h1 className="logo">Juan Contreras </h1>
           <ul className="nav-links">
             <li>
               <a className="menu-item">Home</a>
