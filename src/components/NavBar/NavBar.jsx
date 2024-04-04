@@ -37,7 +37,7 @@ function NavBar() {
             </button>
           </ul>
 
-          <button class="menu-btn" onClick={toggleMenu}>
+          <button className="menu-btn" onClick={toggleMenu}>
             <span className="material-icons">
               {openMenu ? "close" : "menu"}
               </span>
